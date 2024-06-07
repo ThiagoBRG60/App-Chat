@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>App Chat</title>
+</head>
+<body>
+
+   <main>
+      <section class="chatApp">
+         
+         <div class="info">
+            <input type="text" id="usernameInput" placeholder="nome de usuário...">
+            <p>Users Online: <span>0</span></p>
+         </div>
+
+         <div class="chatAreaWrapper">
+            <div class="chatArea"></div>
+            <div class="userTyping">
+               <div class="dot1"></div>
+               <div class="dot2"></div>
+               <div class="dot3"></div>
+            </div>
+         </div>
+
+         <div class="sendInfo">
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+            <button type="button">Enviar</button>
+         </div>
+
+      </section>
+   </main>
+
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="./index.js"></script>
+</body>
+</html>
