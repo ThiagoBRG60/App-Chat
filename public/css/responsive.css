@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+   body {
+      align-items: normal;
+      padding-top: 30px;
+    }
+
+    /* Chat App Section */  
+    .chatApp {
+      width: 700px;
+      height: 700px;
+    }
+}
+
+@media (max-width: 430px) {
+    /* Chat App Section */
+    
+    .chatApp {
+      width: 400px;
+      height: 750px;
+      padding: 10px 20px;
+    }
+    
+    /* Username And Users Online*/
+    
+    .info {
+      margin-bottom: 10px;
+    }
+    .info input {
+      padding: 2px 5px;
+    }
+    
+    /* Messages Area */
+    
+    .chatAreaWrapper {
+      width: 100%;
+      height: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    /* Chat App Section */
+    
+    .chatApp {
+      width: 350px;
+      height: 600px;
+      padding: 10px 20px;
+    }
+    
+    /* Messages Area */
+
+    .chatArea p {
+      font-size: 12px;
+    }
+
+    /* Username And Users Online*/
+    
+    .info {
+      margin-bottom: 10px;
+    }
+    .info input {
+      width: 140px;
+      padding: 2px 5px;
+    }
+    .info p {
+      font-size: 14px;
+    }
+    .info p::before {
+      left: -25px;
+    }
+
+    /* Send Messages Input And Button */
+
+    .sendInfo {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .sendInfo input {
+      width: 100%;
+      height: 40px;
+    }
+    .sendInfo button {
+      height: 40px;
+      padding: 0 10px;
+    }
+}
