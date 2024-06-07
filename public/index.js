@@ -15,6 +15,10 @@ const sendButton = document.querySelector('.sendInfo button')
 let typing = false
 let timeout = null
 
+function scrollToBottom() {
+   messagesDiv.scrollTop = messagesDiv.scrollHeight;
+ }
+
 usernameInput.addEventListener("keydown", (e) => {
    if (e.key === "Enter") {
       sendUsername()
@@ -60,13 +64,11 @@ function stopTyping() {
 }
 
 socket.on('message', (data) => {
-   console.log('Data username:', data.username);
-   console.log('Socket username:', socket.username);
    const messageElement = document.createElement("p")
    messageElement.textContent = `${data.senderId === socket.id && data.username === undefined ? "Você" : data.username !== undefined ? data.username : "Estranho"}: ${data.message}`
    messageElement.classList.add(data.senderId === socket.id ? 'sent' : 'stranger');
-
    messagesDiv.appendChild(messageElement)
+   scrollToBottom()
 })
 
 socket.on('typing', () => {
@@ -88,3 +90,9 @@ function sendMessage() {
       socket.emit('stopTyping')
    }
 }
+
+window.addEventListener('beforeunload', (e) => {
+   const confirmationMessage = 'Você realmente quer sair? As alterações não salvas serão perdidas.';
+   e.returnValue = confirmationMessage;
+   return confirmationMessage; 
+ });

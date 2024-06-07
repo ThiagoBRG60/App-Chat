@@ -3,7 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fdfdfd;
+  background-color: #121212;
 }
 
 /* Chat App Section */
@@ -17,7 +17,7 @@ body {
   height: 800px;
   padding: 30px 60px;
   border: 2px solid;
-  background-color: #ececec;
+  background-color: #333333;
   border-radius: 6px;
 }
 
@@ -35,8 +35,11 @@ body {
   border-radius: 50px;
   border: 2px solid #0000008f;
   outline: 0;
+  background-color: #383838;
+  color: #fff;
 }
 .info p {
+  color: #fff;
   position: relative;
 }
 .info p span {
@@ -60,7 +63,7 @@ body {
   width: 675px;
   height: 600px;
   border-radius: 6px;
-  background-color: #fdfdfd;
+  background-color: #383838;
   border: 2px solid rgba(0, 0, 0, 0.253);
   position: relative;
 }
@@ -72,6 +75,7 @@ body {
   max-height: 100%;
   overflow-y: auto;
   padding: 10px;
+  padding-bottom: 60px;
   border-radius: inherit;
 }
 .chatArea p {
@@ -147,6 +151,8 @@ body {
   outline: 0;
   padding: 10px;
   border-radius: 4px;
+  background-color: #383838;
+  color: #fff;
   border: 2px solid #fe9601;
 }
 .sendInfo button {
